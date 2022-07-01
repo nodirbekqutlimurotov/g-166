@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.card__section__container .card__box {
+  position: relative;
+  padding: 20px;
+  min-width: 330px;
+  border-radius: 7px;
+  border: 3px solid rgba(112, 115, 124, 0.1);
+}
+.card__section__container .card__box .card__box__heart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #FFCF55;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.card__section__container .card__box .card__box__image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 320px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../image/ab1.png");
+}
+.card__section__container .card__box .card__box__star__icons .box__star__icon {
+  color: #FFCF55;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card__section__container .card__box .card__box__star__icons .box__star__icon__text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #70737C;
+}
+.card__section__container .card__box .card__box__paragraph {
+  margin: 15px 0;
+}
+.card__section__container .card__box .card__box__down {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__section__container .card__box .card__box__down .box__cost {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.card__section__container .card__box .card__box__down .box__cost .icon__fire {
+  color: #E55c5c;
+}
+.card__section__container .card__box .card__box__down .box__cost .advert-left__skidka {
+  display: inline-block;
+  color: #70737C;
+  text-decoration: line-through;
+  font-size: 1rem;
+}
+.card__section__container .card__box .card__box__down .cart__shopping {
+  color: #359740;
+  background-color: #fff;
+  font-weight: 700;
+  padding: 20px 40px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: 3px solid rgba(112, 115, 124, 0.1);
+  padding: 10px;
+}
+.card__section__container .card__box:nth-child(5) .card__box__heart {
+  color: #FFCF55;
+  border: 2px solid #FFCF55;
+}
+.card__section__container .card__box:nth-child(5) .card__box__image, .card__section__container .card__box:nth-child(2) .card__box__image {
+  background-image: url("../../image/aa4.jpg");
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 320px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card__section__container .card__box:nth-child(3) .card__box__image, .card__section__container .card__box:nth-child(6) .card__box__image {
+  background-image: url("../../image/aa2.jpg");
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 320px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */

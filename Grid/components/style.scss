@@ -1,0 +1,310 @@
+@use '../abstracts/forward' as *;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lexend' , sans-serif;
+}
+.container {
+    width: 95%;
+    margin:0 auto;
+    align-items: center;
+}
+/* wrapper */
+.wrapper {
+    width:100%;
+    height:100px;
+    box-shadow: 0 10px 9px rgba(0, 0, 0, 0.1);
+    @include mix__flex(flex, row, flex-start, center);
+    .navbar {
+        @include mix__flex(flex, row, space-between, center);
+        .logo {
+            background-image: url('../image/seedra.png');
+            @include mix__bg(150px, 50px, center, no-repeat, cover);
+        }
+        #nav {
+            @include mix__flex(flex, row, space-between, center);
+            >{
+                a {
+                    color:$paragraphColor;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    // @warn "the a tag is not defined";
+                    @include font(18px , 500);
+
+                }
+                .vl {
+                    height: 25px;
+                    width: 0;
+                    border: 2px solid transparent;
+                    border-left: 2px solid rgba($paragraphColor, 0.5);
+                    margin:0 15px;
+                }
+            }
+        }
+        .icons {
+            position: relative;
+            @include mix__flex();
+            >{
+                .icon {
+                    @include font(26px, 500);
+                    &:nth-child(1),&:nth-child(2) {
+                        margin:0 10px;
+                        font-size: 30px;
+                        color:rgba($paragraphColor, 0.5);
+                    }
+                    &:nth-child(2){
+                        margin-right:50px;
+                    }
+                    &:nth-child(3) {
+                        position:absolute;
+                        top: 25%;
+                        left:28%;
+                        color:rgba($paragraphColor, 0.5);
+                    }
+                    &:nth-child(6) {
+                        margin-left: 40px;
+                        color: $greenColor;
+                    }
+                    &:nth-child(5) {
+                        margin-left: 15px;
+                        color: $greenColor;
+                    }
+                }
+                .icons__search {
+                    padding: 20px 60px;
+                    border-radius:50px;
+                }
+                
+            }
+        }
+    }
+}
+
+/* banner */
+
+.banner {
+    margin-top: 50px;
+    .advertisement {
+        @include mix__flex( $jc:space-between, $al:flex-start);
+        width:100%;
+        height: calc(100vh - 100px);
+        background-color: $whitebgColor;
+        border-radius: 30px;
+        .advert-left {
+            width:60%;
+            margin-left:5%;
+            >.advert-left__title {
+                @include font(2.7rem, 800);
+                margin: 50px 0 20px;
+            }
+            >.advert-left__paragraph {
+                @include font(1em, 100);
+                line-height:2em;
+                width:85%;
+            }
+            >.advert-left__cost {
+                @include mix__flex($jc:flex-start);
+                @include font(2.5em, 900);
+                margin: 30px 0;
+                >.icon__fire {
+                    color: $fire-iconColor !important;
+                    margin-right: 20px;
+                }
+                >.advert-left__tsena {
+                    margin-right: 20px;
+                }
+                >.advert-left__skidka {
+                    @include font(2rem, 900);
+                    color: $paragraphColor;
+                    text-decoration: line-through;
+                }
+            }
+            >.advert-left__buttons {
+                >.button {
+                    @include mix__btn($greenColor, #fff);
+                    &.button__primary {
+                        @include mix__btn(#fff, $greenColor);
+                        margin-right:20px;
+                    }
+                }
+            }
+        }
+        .advert-right {
+            @include mix__flex();            
+            @include mix__bg(40%, 100%);
+            border-radius: 30px;
+            >.advert-right__image {
+                background-image: url('../image/ab1.png');
+                @include mix__bg(100%, 80%);
+            }
+        }
+    }
+}
+/* arrange */
+.arrange__container {
+    @include mix__bg(95%, 150px, bottom,no-repeat, cover);
+    background-image: url('../image/aa7.jpg');
+    margin:50px auto;
+    border-radius:20px;
+    @include mix__flex($fd:row);
+
+    .container{
+        .arrange {
+            background-color: $whitebgColor;
+            width: 60%;
+            height: 150px;
+            margin:0 auto;
+            @include mix__flex($fd:column);
+            font-size: 20px;
+            .arrange__title {
+                @include font(1.4rem, 800);
+            }
+            .arrange__paragraph {
+                color: $paragraphColor;
+            }
+        }
+        
+    }
+}
+/* main */
+
+/* product__section */
+main {
+    background-color: #fff;
+    .product__section {
+        width: 100%;
+        .product__section__title {
+            @include mix__flex($jc: space-between);
+            .product__title {
+                @include font(2rem, 700);
+
+            }
+            .button {
+                @include mix__btn($greenColor, #fff);
+                border: 3px solid rgba($paragraphColor, 0.1);
+            }
+        }
+        .product__section__icons {
+            @include mix__flex($jc:space-between);
+            margin: 30px auto;
+            .product__icon {
+                padding: 20px 30px;
+                border: 3px solid rgba($paragraphColor, 0.1);
+                border-radius: 7px;
+                color: $greenColor;
+                .icon__text {
+                    color: #000;
+                }
+            }
+        }
+    }
+    /* card__section */
+    .card__section__container {
+        @include mix__flex(grid, column, flex-start, flex-start);
+        grid-template-columns: auto auto auto;
+        .card__box {
+            position: relative;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 7px;
+            border: 3px solid rgba($paragraphColor, 0.1);
+            .card__box__heart {
+                position: absolute;
+                top:20px;
+                right: 20px;
+                width:40px;
+                height:40px;
+                padding:5px;
+                border-radius: 50%;
+                @include font(1.2rem, 400);
+                @include mix__flex();
+                color: $star-iconColor;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            .card__box__image {
+                @include mix__flex($jc:center);
+                @include mix__bg(80%, 26vw, $bgp: bottom);
+                background-image: url('../image/ab1.png');
+               
+            }
+            .card__box__star__icons {
+                .box__star__icon {
+                    color: $star-iconColor;
+                    @include font(0.9rem, 500);
+                }
+                .box__star__icon__text {
+                    @include font(0.9rem, 500);
+                    color: $paragraphColor;
+                }
+
+            }
+            .card__box__paragraph {
+                margin: 15px 0;
+            }
+            .card__box__down {
+                @include mix__flex($jc:space-between);
+                .box__cost {
+                    @include font(1.5rem,600);
+                    .icon__fire {
+                        color: $fire-iconColor;
+                        
+                    }
+                    .advert-left__skidka {
+                        display: inline-block;
+                        color: $paragraphColor;
+                        text-decoration: line-through;
+                        font-size:1rem;
+                    }
+                }
+                .cart__shopping {
+                    @include mix__btn($greenColor, #fff);
+                    border: 3px solid rgba($paragraphColor, 0.1);
+                    padding: 10px;
+
+                }
+            }
+            &:nth-child(5) {
+                .card__box__heart {
+                    color: $star-iconColor;
+                    border: 2px solid $star-iconColor;
+                }
+            }
+            &:nth-child(5),&:nth-child(2) {
+                .card__box__image {
+                    background-image: url('../image/aa4.jpg');
+                    @include mix__flex($jc:center);
+                    @include mix__bg(100%, 26vw, $bgp: bottom);
+                }
+            }
+            &:nth-child(3),&:nth-child(6) {
+                .card__box__image {
+                    background-image: url('../image/aa2.jpg');
+                    @include mix__flex($jc:center);
+                    @include mix__bg(85%, 22vw, $bgp: center);
+                    margin: 2vw 2vw 2vw;
+                    overflow: hidden;
+                }
+            }
+
+        }
+    }
+    /* ___________________________________*/
+    .container {
+        .bosh__qismi {
+            .btn {
+                @include mix__btn($greenColor, #fff);
+                border: 3px solid rgba($paragraphColor, 0.1);
+            }
+        }
+        .box-container {
+            @include mix__flex(grid, $jc: flex-start);
+            grid-template-columns: auto auto auto;
+
+        }
+    }
+    
+}

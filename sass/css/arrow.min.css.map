@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,IAAI,AAAC,CACH,IAAI,CAAE,IAAI,CAJC,SAAS,CAAE,UAAU,CAKhC,KAAK,CAJS,GAAG,CAIO",
+    "sources": [
+        "../arrow.sass"
+    ],
+    "names": [],
+    "file": "arrow.min.css"
+}

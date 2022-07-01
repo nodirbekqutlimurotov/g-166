@@ -1,0 +1,183 @@
+@use '../../abstracts/forward' as *;
+
+body {
+    font-family: 'Lexend', sans-serif;
+}
+
+header {
+    .navbar {
+        @include mix__flex($jc:space-between);
+        width:100%;
+        .navbar-brand {
+            background-image: url('../../image/seedra.png');
+            @include mix__bg(150px, 50px, center, no-repeat, cover);
+        }
+        .navbar-collapse {
+            justify-content: flex-end;            
+            @media screen and (max-width:1078px) {
+                .dropdown {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* main */
+main {
+    .corn__product {
+        @include mix__flex($al:flex-start);
+        .corn__product__left {
+            background-image: url('../../image/aa4.jpg');
+            @include mix__bg(50%,600px);
+            margin-right: 50px;
+        }
+        .corn__product__right {
+            .right__title {
+                @include font(1.4rem,700);
+            }
+            .right__icons {
+                .product__section__icons {
+                    @include mix__flex($jc:flex-start);
+                    margin: 30px auto;
+                    .product__icon {
+                        padding: 10px 12px;
+                        border: 3px solid rgba($paragraphColor, 0.1);
+                        border-radius: 7px;
+                        color: $greenColor;
+                        .icon__text {
+                            color: #000;
+                            @include font(0.8rem,500);
+                        }
+                    }
+                }
+            }   
+            .pack__label {
+                >label {
+                    width: 100%;
+                    height:40px;
+                    @include mix__flex($jc:space-between);
+                    border: 3px solid rgba($paragraphColor, 0.1);
+                    border-radius: 7px;
+                    padding: 20px 12px;
+                    margin:20px 0;
+                    .pack__right__cost__text {
+                        color: $paragraphColor;
+                        margin-right:15px;
+                    }
+                }
+            } 
+            .pack__right__down {
+                @include mix__flex($al:flex-start,$fd:column);
+                .pack__right__big__cost {
+                    @include font(1.5rem,700);
+                }
+            }
+        }
+    }
+    .product__information {
+        margin:50px 0;
+        @include mix__flex($jc:space-between);
+        ul {
+            width: 50%;
+            >.product__information__title {
+                @include font(2rem,800);
+            }
+            >li {
+                margin:30px 0;
+            }
+
+        }
+        .product__information__right {
+            flex: 1;
+            @include mix__flex($fd:column,$al:center);
+
+            .right__text {
+                margin:30px;
+            }
+        }
+
+    }
+    /* section frequently*/
+    .frequently {
+        @include mix__flex($jc:space-between);
+
+        .frequently__left {
+            .frequently__title {
+                @include font(2rem,800);
+            }
+            width:50%;
+            .left__box {
+                @include mix__border();
+                padding:20px 10px;
+                margin:30px 0;
+            }
+
+        }
+        .frequently__right {
+            background-image: url('../../image/ab7.png');
+            @include mix__bg(30%,500px);
+        }
+    }
+    /* section customer*/
+    .customer {
+        .customer__title__container {
+            @include mix__flex($jc:space-between);
+            .customer__title {
+                @include font(2rem,800);
+            }
+            .button {
+                @include mix__btn();
+                @include mix__border();
+            }
+        }
+        .customer__box__container {
+            @include mix__border();
+            .customer__box {
+                width: 400px;
+                .box__title {
+                    @include mix__flex($jc:flex-start);
+                    .box__title__daraja {
+                        @include font(2.5rem,700);
+                        margin-right:10px;
+                    }
+                    .box__title__stars {
+                        .box__title__stars__text {
+                            color: $paragraphColor;
+                        }
+                        .star__icons {
+                            color: $star-iconColor;
+                        }
+
+                    }
+                }
+                .boxning__pastki__qismi {
+                    .box__skills {
+                        @include mix__flex($jc:flex-start);
+                        .star__icon {
+                            color: $star-iconColor;
+                            margin:0 10px;
+                        }
+                        .box__skills__foizi {
+                            position: relative;
+                            width:70%;
+                            height: 8px;
+                            background-color: $whitebgColor;
+                            overflow: hidden;
+                            border-radius:5px;
+                            &::before {
+                                content:'';
+                                top: 0;
+
+                                width:81%;
+                                height: 100%;
+                                position: absolute;
+                                background-color: $star-iconColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

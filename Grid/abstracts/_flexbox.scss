@@ -1,0 +1,32 @@
+@mixin mix__flex($fl:flex, $fd:row, $jc:center, $al:center) {
+    display: $fl;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $al;
+}
+
+@mixin mix__bg ($w:30px, $h:30px, $bgp:center, $bgr:no-repeat, $bgs:cover) {
+    width: $w;
+    height: $h;
+    background-position: $bgp;
+    background-repeat: $bgr;
+    background-size: $bgs;
+}
+
+@mixin mix__btn($cl:#359740, $bg:#fff) {
+    color: $cl;
+    background-color: $bg;
+    font-weight: 700;
+    padding:20px 40px;
+    font-size: 1rem;
+    border:none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+@mixin mix__border() {
+    border: 3px solid rgba(#70737C, 0.1);
+    border-radius: 7px;
+}
+
+

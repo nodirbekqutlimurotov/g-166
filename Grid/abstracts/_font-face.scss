@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap');
+
+@mixin font($size : 16px, $weight: 400) {
+    font-size: $size;
+    font-weight: $weight;
+}
+// @mixin font {
+//     font-size: 12px;
+//     font-weight: 300;
+// }
+// @mixin font16 {
+//     font-size: 16px;
+//     font-weight: 500;
+// }
+// @mixin font18 {
+//     font-size: 18px;
+//     font-weight: 600;
+// }

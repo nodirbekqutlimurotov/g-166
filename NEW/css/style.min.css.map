@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,IAAI,CAAJ,iBAAI,CAEJ,AAAA,QAAQ,AAAC,CAEL,MAAM,CAAC,MAAM,CAChB",
+    "sources": [
+        "../Unique_coders/style.scss"
+    ],
+    "names": [],
+    "file": "style.min.css"
+}
